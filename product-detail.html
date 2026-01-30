@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Gold Watch | Luxe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 4rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-main {
+            background: #f1f5f9;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .thumb.active,
+        .thumb:hover {
+            opacity: 1;
+            border: 2px solid var(--primary);
+        }
+
+        .pd-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .pd-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pd-price {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .pd-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .pd-desc {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .pd-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .qty-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-md);
+        }
+
+        .qty-btn {
+            padding: 12px 16px;
+            font-weight: bold;
+        }
+
+        .qty-input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .tabs {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            font-weight: 600;
+            color: var(--text-light);
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .gallery-main {
+                height: 350px;
+            }
+
+            .pd-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-gem"></i> LUXE</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="login.html" class="icon-btn"><i class="fa-regular fa-user"></i></a>
+                <a href="cart.html" class="icon-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-detail-container">
+        <!-- Gallery -->
+        <div class="product-gallery">
+            <div class="gallery-main">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Watch Main">
+            </div>
+            <div class="gallery-thumbs">
+                <div class="thumb active"><img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                        alt="Thumb 1"></div>
+                <div class="thumb"><img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                        alt="Thumb 2"></div>
+                <div class="thumb"><img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                        alt="Thumb 3"></div>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div class="product-info-main">
+            <div class="pd-header">
+                <span class="category">Accessories</span>
+                <h1 class="pd-title">Minimalist Gold Watch</h1>
+                <div class="pd-meta">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                        (4.5)
+                    </div>
+                    <span>•</span>
+                    <span>120 Reviews</span>
+                </div>
+            </div>
+
+            <div class="pd-price">$129.00</div>
+
+            <p class="pd-desc">
+                Elevate your everyday style with this premium minimalist gold watch. Featuring a genuine leather strap
+                and water-resistant casing, it's the perfect blend of functionality and sophistication.
+            </p>
+
+            <div class="pd-actions">
+                <div class="qty-selector">
+                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn" onclick="this.nextElementSibling.stepUp()">+</button>
+                </div>
+                <button class="btn btn-primary" onclick="alert('Added to Cart!')">Add to Cart</button>
+                <button class="btn btn-outline"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <div class="web-safe-info">
+                <p><i class="fa-solid fa-check"></i> In Stock & Ready to Ship</p>
+                <p><i class="fa-solid fa-truck"></i> Free Shipping Details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details/Reviews Tabs -->
+    <section class="section" style="background: #f8fafc;">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active">Description</button>
+                <button class="tab-btn">Additional Info</button>
+                <button class="tab-btn">Reviews (120)</button>
+            </div>
+            <div class="tab-content">
+                <p>Designed for the modern individual, this watch combines classic aesthetics with contemporary
+                    durability. The sapphire crystal glass ensures clarity and scratch resistance, while the Japanese
+                    quartz movement guarantees precise timekeeping.</p>
+                <!-- Placeholder content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="bottom-bar">
+                <p>&copy; 2024 Luxe E-Commerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

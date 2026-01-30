@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe | Premium E-Commerce</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-gem"></i> LUXE
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-icons">
+                <a href="#" class="icon-btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="login.html" class="icon-btn"><i class="fa-regular fa-user"></i></a>
+                <a href="cart.html" class="icon-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Elevate Your Style with Premium Essentials</h1>
+                <p>Discover our curated collection of high-quality products designed for the modern lifestyle. Quality
+                    meets sophistication.</p>
+                <div class="hero-btns">
+                    <a href="products.html" class="btn btn-accent">Shop Now</a>
+                    <a href="#featured" class="btn btn-glass">View Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Collection</h2>
+
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be injected via JS -->
+                <!-- Static Fallback / Example -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Watch">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <button class="action-btn" title="View Details"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3 class="product-title">Minimalist Gold Watch</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            (4.5)
+                        </div>
+                        <div class="price">$129.00</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Headphones">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <button class="action-btn" title="View Details"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Electronics</span>
+                        <h3 class="product-title">Premium Wireless Audio</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            (5.0)
+                        </div>
+                        <div class="price">$299.00</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Sneakers">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <button class="action-btn" title="View Details"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Footwear</span>
+                        <h3 class="product-title">Urban Runner Sneakers</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4.2)
+                        </div>
+                        <div class="price">$89.00</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="products.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Trust Indicators -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="services-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                <div class="service-item">
+                    <i class="fa-solid fa-truck-fast"
+                        style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Free Shipping</h3>
+                    <p style="color: var(--text-light);">On all orders over $100</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-shield-halved"
+                        style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Secure Payment</h3>
+                    <p style="color: var(--text-light);">100% secure transaction</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-rotate-left"
+                        style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Easy Returns</h3>
+                    <p style="color: var(--text-light);">30 day money back guarantee</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-headset"
+                        style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>24/7 Support</h3>
+                    <p style="color: var(--text-light);">Dedicated support team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Luxe</h3>
+                    <p>Elevating your lifestyle with premium quality products. We believe in sophistication and
+                        elegance.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Stay Connected</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <p>&copy; 2024 Luxe E-Commerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

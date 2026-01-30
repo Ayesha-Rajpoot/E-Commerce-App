@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Luxe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page Specific Styles */
+        .shop-container {
+            display: flex;
+            gap: 3rem;
+            padding: 4rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .filter-group {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        .filter-group h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .filter-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .filter-list li:hover {
+            color: var(--primary);
+        }
+
+        .shop-content {
+            flex: 1;
+        }
+
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .sort-select {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-md);
+            background: white;
+            font-family: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .shop-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-gem"></i> LUXE
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-icons">
+                <a href="#" class="icon-btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="login.html" class="icon-btn"><i class="fa-regular fa-user"></i></a>
+                <a href="cart.html" class="icon-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="shop-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>Categories <i class="fa-solid fa-chevron-down" style="font-size:0.8rem"></i></h3>
+                <ul class="filter-list">
+                    <li><input type="checkbox"> All Products</li>
+                    <li><input type="checkbox"> Accessories</li>
+                    <li><input type="checkbox"> Electronics</li>
+                    <li><input type="checkbox"> Footwear</li>
+                    <li><input type="checkbox"> Clothing</li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price Range <i class="fa-solid fa-chevron-down" style="font-size:0.8rem"></i></h3>
+                <ul class="filter-list">
+                    <li><input type="checkbox"> Under $50</li>
+                    <li><input type="checkbox"> $50 - $100</li>
+                    <li><input type="checkbox"> $100 - $200</li>
+                    <li><input type="checkbox"> Over $200</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="shop-content">
+            <div class="shop-header">
+                <p>Showing 1–9 of 24 results</p>
+                <select class="sort-select">
+                    <option>Default Sorting</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest First</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Watch">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3 class="product-title">Minimalist Gold Watch</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="price">$129.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Headphones">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Electronics</span>
+                        <h3 class="product-title">Premium Wireless Audio</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$299.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Sneakers">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Footwear</span>
+                        <h3 class="product-title">Urban Runner Sneakers</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$89.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Sunglasses">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3 class="product-title">Classic Aviators</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$150.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Camera">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Electronics</span>
+                        <h3 class="product-title">Analog Instant Camera</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$85.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Bag">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Fashion</span>
+                        <h3 class="product-title">Leather Crossbody Bag</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$195.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Sneakers">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Footwear</span>
+                        <h3 class="product-title">Classic White Sneakers</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$95.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Notebook">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Stationery</span>
+                        <h3 class="product-title">Premium Leather Journal</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$45.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Perfume">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Fragrance</span>
+                        <h3 class="product-title">Luxury Eau de Parfum</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="price">$120.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Backpack">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Bags</span>
+                        <h3 class="product-title">Canvas Travel Backpack</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$79.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Keyboard">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Electronics</span>
+                        <h3 class="product-title">Mechanical Keyboard</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$159.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Mug">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Home</span>
+                        <h3 class="product-title">Ceramic Coffee Mug</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$25.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Wallet">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3 class="product-title">Minimalist Leather Wallet</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="price">$65.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Shoes">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Footwear</span>
+                        <h3 class="product-title">Running Shoes Pro</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$139.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Plant">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Home</span>
+                        <h3 class="product-title">Indoor Succulent Set</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$35.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1602874801006-39554b946d8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Candle">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Home</span>
+                        <h3 class="product-title">Scented Soy Candle</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="price">$28.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Hat">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3 class="product-title">Baseball Cap</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="price">$32.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="product-detail.html">
+                            <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Bottle">
+                        </a>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Add to Cart"><i class="fa-solid fa-plus"></i></button>
+                            <a href="product-detail.html" class="action-btn" title="View Details"><i
+                                    class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lifestyle</span>
+                        <h3 class="product-title">Stainless Steel Water Bottle</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">$42.00</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 4rem;">
+                <button class="btn btn-primary pagination-btn" data-page="1">1</button>
+                <button class="btn btn-outline pagination-btn" data-page="2"
+                    style="border: 1px solid #ddd; color: var(--text-main);">2</button>
+                <button class="btn btn-outline pagination-btn" data-page="3"
+                    style="border: 1px solid #ddd; color: var(--text-main);">3</button>
+                <button class="btn btn-outline pagination-btn" data-page="next"
+                    style="border: 1px solid #ddd; color: var(--text-main);"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="bottom-bar">
+                <p>&copy; 2024 Luxe E-Commerce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Pagination functionality
+        const allProducts = document.querySelectorAll('.product-card');
+        const productsPerPage = 6;
+        let currentPage = 1;
+
+        function showPage(pageNumber) {
+            currentPage = pageNumber;
+
+            // Hide all products
+            allProducts.forEach(product => {
+                product.style.display = 'none';
+            });
+
+            // Calculate start and end indices
+            const startIndex = (pageNumber - 1) * productsPerPage;
+            const endIndex = startIndex + productsPerPage;
+
+            // Show products for current page
+            for (let i = startIndex; i < endIndex && i < allProducts.length; i++) {
+                allProducts[i].style.display = 'block';
+            }
+
+            // Update pagination buttons
+            updatePaginationButtons();
+        }
+
+        function updatePaginationButtons() {
+            const buttons = document.querySelectorAll('.pagination-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.dataset.page) === currentPage) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize pagination
+        showPage(1);
+
+        // Add click handlers to pagination buttons
+        document.querySelectorAll('.pagination-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const page = btn.dataset.page;
+                if (page === 'next') {
+                    const totalPages = Math.ceil(allProducts.length / productsPerPage);
+                    if (currentPage < totalPages) {
+                        showPage(currentPage + 1);
+                    }
+                } else {
+                    showPage(parseInt(page));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
